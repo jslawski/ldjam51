@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableTorso : InteractableCollider
+public class InteractableHead : InteractableCollider
 {
     private CharacterJoint charJoint;
 
@@ -20,17 +20,19 @@ public class InteractableTorso : InteractableCollider
     {
         Vector3 finalRotationVector = Vector3.zero;
 
-        //Rotates z
+        Vector3 oldRotation = this.colliderRb.rotation.eulerAngles;
+
+        //Rotates y
         float xDelta = this.targetPosition.x - this.initialClickPosition.x;
         //Rotates x
         float yDelta = this.targetPosition.y - this.initialClickPosition.y;
 
-        float zAngle = Mathf.Lerp(0.0f, (this.charJoint.swing1Limit.limit), (Mathf.Abs(xDelta) / this.maxDelta));
+        float yAngle = Mathf.Lerp(0.0f, (this.charJoint.swing2Limit.limit), (Mathf.Abs(xDelta) / this.maxDelta));
         float xAngle = 0f;
 
-        if (xDelta < 0)
+        if (xDelta > 0)
         {
-            zAngle *= -1;
+            yAngle *= -1;
         }
         if (yDelta > 0)
         {
@@ -41,7 +43,7 @@ public class InteractableTorso : InteractableCollider
             xAngle = -Mathf.Lerp(0.0f, (this.charJoint.lowTwistLimit.limit), (Mathf.Abs(yDelta) / this.maxDelta));
         }
 
-        finalRotationVector = new Vector3(xAngle, 180.0f, zAngle);
+        finalRotationVector = new Vector3(xAngle, yAngle - 180.0f, oldRotation.z);
         
         this.colliderRb.MoveRotation(Quaternion.Euler(finalRotationVector));
     }

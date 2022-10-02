@@ -123,6 +123,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &577293734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5646326975384916513, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+  m_PrefabInstance: {fileID: 5924355209226035029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &577293739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577293734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2608cd4c6b7be94aa8707200a23062e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrabbed: 0
+  colliderRb: {fileID: 0}
+  joint: {fileID: 0}
+  maxDelta: 0.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1832280661, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: allInteractableColliders.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1832280661, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: allInteractableColliders.Array.data[0]
@@ -627,6 +648,14 @@ PrefabInstance:
       propertyPath: allInteractableColliders.Array.data[4]
       value: 
       objectReference: {fileID: 1207851949}
+    - target: {fileID: 1832280661, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: allInteractableColliders.Array.data[5]
+      value: 
+      objectReference: {fileID: 577293739}
+    - target: {fileID: 1960757986476224573, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0a0894a61ea046a4488e9c855d432215, type: 2}
     - target: {fileID: 2570416687960545467, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -654,6 +683,10 @@ PrefabInstance:
     - target: {fileID: 2570416687960545467, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661949189728843805, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_Swing2Limit.limit
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3897941741390019793, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_RootOrder
@@ -733,7 +766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5646326975106960457, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_AngularZLimit.limit
-      value: 11.25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5646326975106960457, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_LowAngularXLimit.limit
@@ -751,8 +784,92 @@ PrefabInstance:
       propertyPath: m_AngularYZLimitSpring.spring
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5646326975106960457, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5646326975106960459, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916513, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916516, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916516, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916518, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916518, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916518, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916518, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916518, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916518, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_XMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_YMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_ZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_AngularXMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_AngularYMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_AngularZMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LowAngularXLimit.limit
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_HighAngularXLimit.limit
+      value: 11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LinearLimitSpring.spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646326975384916519, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6324250455973914998, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
@@ -767,6 +884,10 @@ PrefabInstance:
       propertyPath: m_HighTwistLimit.limit
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8526058504514987472, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0a0894a61ea046a4488e9c855d432215, type: 2}
     m_RemovedComponents:
     - {fileID: 1207851949, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
     - {fileID: 750194740, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
