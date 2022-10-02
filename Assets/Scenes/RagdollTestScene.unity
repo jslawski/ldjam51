@@ -703,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_Axis.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_Axis.z
@@ -739,15 +739,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -7.7996115e-10
+      value: 0.000000024106452
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.000000028172531
+      value: -0.0000000049558637
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000004123996
+      value: 0.00000006007464
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_LinearLimit.limit
@@ -767,11 +767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_LowAngularXLimit.limit
-      value: -118.23222
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_HighAngularXLimit.limit
-      value: 70.62
+      value: 177
       objectReference: {fileID: 0}
     - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
@@ -795,6 +795,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621291378162472534, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_EnableProjection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621291378162472534, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_Swing1Limit.limit
+      value: 127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621291378162472534, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LowTwistLimit.limit
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3661949189728843805, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
