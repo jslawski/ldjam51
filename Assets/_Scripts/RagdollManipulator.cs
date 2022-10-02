@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RagdollManipulator : MonoBehaviour
@@ -25,15 +23,22 @@ public class RagdollManipulator : MonoBehaviour
             if (Physics.Raycast(mouseRay, out hit, Mathf.Infinity, detectableLayer))
             {
                 this.grabbedCollider = hit.collider.gameObject.GetComponent<InteractableCollider>();
-                this.grabbedCollider.isGrabbed = true;
+
                 this.rayDistance = hit.distance;
+
+                Vector3 adjustedMosPos =
+                Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, this.rayDistance));
+                adjustedMosPos = new Vector3(adjustedMosPos.x, adjustedMosPos.y, this.grabbedCollider.colliderRb.position.z);
+
+                this.grabbedCollider.isGrabbed = true;
+                this.grabbedCollider.SetInitialClickPosition(adjustedMosPos);                                
             }
         }
         if (Input.GetMouseButtonUp(0))
         {
             if (this.grabbedCollider != null)
             {
-                this.grabbedCollider.isGrabbed = true;
+                this.grabbedCollider.isGrabbed = false;
                 this.grabbedCollider = null;
                 this.ResetAllInteractableColliders();
             }
@@ -45,11 +50,11 @@ public class RagdollManipulator : MonoBehaviour
         {
             Vector3 adjustedMosPos =
                 Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, this.rayDistance));
-            
+            adjustedMosPos = new Vector3(adjustedMosPos.x, adjustedMosPos.y, this.grabbedCollider.colliderRb.position.z);
+
             if (this.grabbedCollider != null)
             {
-                //this.grabbedCollider.SetTargetPosition(new Vector2(adjustedMosPos.x, adjustedMosPos.y));
-                this.targetDestination = new Vector2(adjustedMosPos.x, adjustedMosPos.y);
+                this.grabbedCollider.SetTargetPosition(adjustedMosPos);
             }            
         }
     }
@@ -63,6 +68,7 @@ public class RagdollManipulator : MonoBehaviour
         }
     }
 
+    /*
     private void FixedUpdate()
     {
         
@@ -72,5 +78,6 @@ public class RagdollManipulator : MonoBehaviour
                                                 this.targetDestination.y, 
                                                 this.grabbedCollider.colliderRb.position.z));                                                
         }        
-    }    
+    } 
+    */
 }

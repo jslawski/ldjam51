@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class InteractableCollider : MonoBehaviour
 {
+    [HideInInspector]
     public bool isGrabbed = false;
+    [HideInInspector]
     public Rigidbody colliderRb;
+    [HideInInspector]
     public ConfigurableJoint joint;
 
-    private Vector3 targetPosition;
+    protected Vector3 initialClickPosition;
+    protected Vector3 targetPosition;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         this.colliderRb = GetComponent<Rigidbody>();
         this.joint = GetComponent<ConfigurableJoint>();
     }
 
+    public void SetInitialClickPosition(Vector3 initialPos)
+    {
+        this.initialClickPosition = initialPos;
+    }
 
-
-    /*
     public void SetTargetPosition(Vector3 targetPos)
     {
         this.targetPosition = targetPos;
@@ -34,10 +40,17 @@ public class InteractableCollider : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected void FixedUpdate()
     {
-        this.colliderRb.MovePosition(this.targetPosition);
+        if (this.isGrabbed == true)
+        {
+            this.UpdateJoint();
+        }
     }
-    */
+
+    protected virtual void UpdateJoint()
+    {
+
+    }
     
 }
