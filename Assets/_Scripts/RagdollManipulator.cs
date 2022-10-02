@@ -5,7 +5,9 @@ using UnityEngine;
 public class RagdollManipulator : MonoBehaviour
 {
     [SerializeField]
-    private Transform grabbedTransform;
+    private InteractableCollider[] allInteractableColliders;
+
+    private InteractableCollider grabbedCollider;
 
     [SerializeField]
     private LayerMask detectableLayer;
@@ -22,35 +24,56 @@ public class RagdollManipulator : MonoBehaviour
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);            
             if (Physics.Raycast(mouseRay, out hit, Mathf.Infinity, detectableLayer))
             {
-                this.grabbedTransform = hit.collider.gameObject.transform;
+                this.grabbedCollider = hit.collider.gameObject.GetComponent<InteractableCollider>();
+                this.grabbedCollider.isGrabbed = true;
                 this.rayDistance = hit.distance;
             }
         }
         if (Input.GetMouseButtonUp(0))
         {
-            this.grabbedTransform = null;
+            if (this.grabbedCollider != null)
+            {
+                this.grabbedCollider.isGrabbed = true;
+                this.grabbedCollider = null;
+                this.ResetAllInteractableColliders();
+            }
+
             this.rayDistance = 0.0f;
         }
-
 
         if (this.rayDistance > 0.0f)
         {
             Vector3 adjustedMosPos =
                 Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, this.rayDistance));
+            
+            if (this.grabbedCollider != null)
+            {
+                //this.grabbedCollider.SetTargetPosition(new Vector2(adjustedMosPos.x, adjustedMosPos.y));
+                this.targetDestination = new Vector2(adjustedMosPos.x, adjustedMosPos.y);
+            }            
+        }
+    }
 
-            this.targetDestination = new Vector2(adjustedMosPos.x, adjustedMosPos.y);
+    private void ResetAllInteractableColliders()
+    {
+        for (int i = 0; i < this.allInteractableColliders.Length; i++)
+        {
+            this.allInteractableColliders[i].gameObject.transform.position = 
+                this.allInteractableColliders[i].joint.connectedBody.position;
         }
     }
 
     private void FixedUpdate()
     {
         
-        if (this.grabbedTransform != null)
-        {
-            this.grabbedTransform.position = new Vector3(this.targetDestination.x, 
+        if (this.grabbedCollider != null)
+        {            
+            this.grabbedCollider.colliderRb.MovePosition(new Vector3(this.targetDestination.x, 
                                                 this.targetDestination.y, 
-                                                this.grabbedTransform.position.z);
+                                                this.grabbedCollider.colliderRb.position.z));
+                                                
         }
         
     }
+    
 }
