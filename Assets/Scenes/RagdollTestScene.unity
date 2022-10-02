@@ -652,6 +652,10 @@ PrefabInstance:
       propertyPath: allInteractableColliders.Array.data[5]
       value: 
       objectReference: {fileID: 577293739}
+    - target: {fileID: 1152075351079713669, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_SecondaryAxis.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1960757986476224573, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_Material
       value: 
@@ -879,6 +883,10 @@ PrefabInstance:
     - target: {fileID: 6663860054416480723, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_Swing1Limit.limit
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663860054416480723, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
+      propertyPath: m_LowTwistLimit.limit
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 6663860054416480723, guid: e8a427e86e550eb4dbf1d688ee566121, type: 3}
       propertyPath: m_HighTwistLimit.limit

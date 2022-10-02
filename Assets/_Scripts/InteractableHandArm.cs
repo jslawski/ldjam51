@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class InteractableHandArm : InteractableCollider
 {
+    private float moveSpeed = 3f;
+
     protected override void UpdateJoint()
     {
-        this.colliderRb.MovePosition(this.targetPosition);
+        Vector3 lerpedPosition = Vector3.Lerp(this.colliderRb.position, this.targetPosition, this.moveSpeed * Time.fixedDeltaTime);
+
+        this.colliderRb.MovePosition(lerpedPosition);
     }
 }
