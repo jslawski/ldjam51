@@ -14,6 +14,19 @@ public class RagdollManipulator : MonoBehaviour
 
     private float rayDistance = 0.0f;
 
+    /*
+    private void Start()
+    {
+        for (int i = 0; i < this.allInteractableColliders.Length; i++)
+        {
+            this.allInteractableColliders[i].colliderRb.gameObject.transform.position = this.allInteractableColliders[i].joint.connectedBody.position;
+            this.allInteractableColliders[i].colliderRb.gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+            this.allInteractableColliders[i].colliderRb.gameObject.SetActive(true);
+            this.allInteractableColliders[i].joint.connectedBody.isKinematic = false;
+        }
+    }
+    */
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

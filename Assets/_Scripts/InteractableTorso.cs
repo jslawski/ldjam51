@@ -9,9 +9,9 @@ public class InteractableTorso : InteractableCollider
     [SerializeField]
     private float maxDelta = 2f;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
 
         this.charJoint = this.joint.connectedBody.gameObject.GetComponent<CharacterJoint>();
     }

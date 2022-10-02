@@ -6,19 +6,18 @@ public class InteractableCollider : MonoBehaviour
 {
     [HideInInspector]
     public bool isGrabbed = false;
-    [HideInInspector]
+
     public Rigidbody colliderRb;
-    [HideInInspector]
     public ConfigurableJoint joint;
 
     protected Vector3 initialClickPosition;
     protected Vector3 targetPosition;
 
     // Start is called before the first frame update
-    protected virtual void Start()
+    protected virtual void Awake()
     {
-        this.colliderRb = GetComponent<Rigidbody>();
-        this.joint = GetComponent<ConfigurableJoint>();
+        //this.colliderRb = GetComponent<Rigidbody>();
+        //this.joint = GetComponent<ConfigurableJoint>();
     }
 
     public void SetInitialClickPosition(Vector3 initialPos)
