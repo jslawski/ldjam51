@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8954389117083120161}
   m_Layer: 0
-  m_Name: LeftArm
+  m_Name: LeftArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 2048084340016781864}
   - component: {fileID: 2048084340016781867}
   m_Layer: 3
-  m_Name: LeftHand
+  m_Name: LeftHandCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 2048084341240026135}
   - component: {fileID: 2048084341240026132}
   m_Layer: 3
-  m_Name: Head
+  m_Name: HeadCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 2048084341332119284}
   - component: {fileID: 2048084341332119286}
   m_Layer: 3
-  m_Name: RightHand
+  m_Name: RightHandCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 2048084341494647421}
   - component: {fileID: 2048084341494647418}
   m_Layer: 3
-  m_Name: Torso
+  m_Name: TorsoCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 6313803328672687526}
   - component: {fileID: 6758627337143991734}
   m_Layer: 3
-  m_Name: RightArm
+  m_Name: RightArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

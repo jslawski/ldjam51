@@ -309,18 +309,18 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -60
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 20
+    limit: 60
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 10
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
@@ -1202,6 +1202,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2048084340016781862, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 2048084340016781864, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_ConnectedBody
       value: 
@@ -1228,15 +1232,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048084340016781865, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.x
-      value: 0.19308478
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2048084340016781865, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.y
-      value: 0.15171812
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2048084340016781865, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.z
-      value: 0.33
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2048084340016781865, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Center.x
@@ -1302,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2048084341332119284, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 2048084341332119286, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_ConnectedBody
       value: 
@@ -1344,15 +1352,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048084341332119287, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.x
-      value: 0.19308478
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2048084341332119287, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.y
-      value: 0.15171812
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2048084341332119287, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.z
-      value: 0.33
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2048084341332119287, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Center.x
@@ -1441,6 +1449,10 @@ PrefabInstance:
     - target: {fileID: 2836328147104092193, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313803328672687526, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6426052574545903280, guid: 5bbdf8010ec46104fb5e8b588f88bdb6, type: 3}
       propertyPath: m_Size.x
@@ -1670,7 +1682,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &2147379139
 BoxCollider:

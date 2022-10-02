@@ -70,10 +70,7 @@ public class RagdollManipulator : MonoBehaviour
         {            
             this.grabbedCollider.colliderRb.MovePosition(new Vector3(this.targetDestination.x, 
                                                 this.targetDestination.y, 
-                                                this.grabbedCollider.colliderRb.position.z));
-                                                
-        }
-        
-    }
-    
+                                                this.grabbedCollider.colliderRb.position.z));                                                
+        }        
+    }    
 }
