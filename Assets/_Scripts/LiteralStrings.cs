@@ -17,7 +17,11 @@ public static class LiteralStrings
     {
         int chosenIndex = Random.Range(0, names.Count);
         string chosenName = names[chosenIndex];
-        names.RemoveAt(chosenIndex);
+
+        if (GameManager.instance.tutorial == false)
+        {
+            names.RemoveAt(chosenIndex);
+        }
 
         return chosenName;
     }
@@ -26,7 +30,11 @@ public static class LiteralStrings
     {
         int chosenIndex = Random.Range(0, quotes.Count);
         string chosenQuote = quotes[chosenIndex];
-        quotes.RemoveAt(chosenIndex);
+
+        if (GameManager.instance.tutorial == false)
+        {
+            quotes.RemoveAt(chosenIndex);
+        }
 
         return chosenQuote;
     }

@@ -76,9 +76,11 @@ public class PhotoTaker : MonoBehaviour
 
         this.photoAnimator.SetTrigger("ShowPhoto");
 
-        PhotoData newPhotoData = new PhotoData(savephotoTexture);
-
-        PhotoAlbum.AddPhoto(newPhotoData);
+        if (GameManager.instance.tutorial == false)
+        {
+            PhotoData newPhotoData = new PhotoData(savephotoTexture);
+            PhotoAlbum.AddPhoto(newPhotoData);
+        }
     }
 
     private void OnDestroy()

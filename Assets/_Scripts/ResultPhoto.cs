@@ -6,6 +6,7 @@ public class ResultPhoto : MonoBehaviour
 {
     public void StartNextLevel()
     {
+        GameManager.instance.tutorial = false;
         GameManager.instance.LoadNextLevel();
     }
 }

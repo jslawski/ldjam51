@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Image poseImage;
+    [SerializeField]
+    private Image tutorialImage;
 
     [SerializeField]
     private TextMeshProUGUI studentCounter;
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI poseLabel;
     
     public bool tutorial = false;
+    private bool tutorialSuccessTriggered = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -162,7 +165,12 @@ public class GameManager : MonoBehaviour
     private IEnumerator LoadCharacter()
     {
         yield return new WaitForSeconds(0.5f);
-        
+
+        if (this.tutorial == false)
+        {
+            this.tutorialImage.enabled = false;
+        }
+
         this.characterName = LiteralStrings.GetRandomName();
         this.quote = LiteralStrings.GetRandomQuote();
         
@@ -186,10 +194,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.tutorial == true && this.levelScore >= 5)
+        if (this.tutorial == true && this.tutorialSuccessTriggered == false && this.levelScore >= 5)
         {
-            this.tutorial = false;
-            this.LoadNextLevel();
+            this.tutorialSuccessTriggered = true;
+            this.photoTaker.TakePhoto();
         }
     }
 }
