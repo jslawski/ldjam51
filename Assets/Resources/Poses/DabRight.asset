@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fa6e24f1061cc4896a2aa36e443e62, type: 3}
   m_Name: DabRight
   m_EditorClassIdentifier: 
-  headZonePosition: {x: 0.109, y: 0.266, z: -0.084}
-  torsoZonePosition: {x: -0.11, y: 0, z: -0.045}
-  rightArmZonePosition: {x: 0, y: 0, z: 0}
-  rightHandZonePosition: {x: 0, y: 0, z: 0}
-  leftArmZonePosition: {x: 0, y: 0, z: 0}
-  leftHandZonePosition: {x: 0, y: 0, z: 0}
+  headZonePosition: {x: -0.33515784, y: 0.963264, z: -0.19646634}
+  torsoZonePosition: {x: -0.29078683, y: 0.7407568, z: -0.19587153}
+  rightArmZonePosition: {x: -0.52839494, y: 0.94116336, z: -0.22332685}
+  rightHandZonePosition: {x: -0.59287244, y: 1.0889838, z: -0.25654948}
+  leftArmZonePosition: {x: -0.06556418, y: 0.89531654, z: -0.1339888}
+  leftHandZonePosition: {x: -0.20859659, y: 0.913051, z: -0.2137081}

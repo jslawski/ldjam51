@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEditor;
 
 public class GoalPoseMaker : MonoBehaviour
 {
@@ -59,6 +60,12 @@ public class GoalPoseMaker : MonoBehaviour
         this.poseData.rightHandZonePosition = this.poseZones[3].position;
         this.poseData.leftArmZonePosition = this.poseZones[4].position;
         this.poseData.leftHandZonePosition = this.poseZones[5].position;
+
+        /*
+        EditorUtility.SetDirty(this.poseData);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+        */
     }
 
     private void Update()

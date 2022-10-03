@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.tutorial == true && this.tutorialSuccessTriggered == false && this.levelScore >= 5)
+        if (this.debug == false && this.tutorial == true && this.tutorialSuccessTriggered == false && this.levelScore >= 5)
         {
             this.tutorialSuccessTriggered = true;
             this.photoTaker.TakePhoto();

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fa6e24f1061cc4896a2aa36e443e62, type: 3}
   m_Name: VPose
   m_EditorClassIdentifier: 
-  headZonePosition: {x: 0.109, y: 0.266, z: -0.084}
-  torsoZonePosition: {x: -0.11, y: 0, z: -0.045}
-  rightArmZonePosition: {x: 0, y: 0, z: 0}
-  rightHandZonePosition: {x: 0, y: 0, z: 0}
-  leftArmZonePosition: {x: 0, y: 0, z: 0}
-  leftHandZonePosition: {x: 0, y: 0, z: 0}
+  headZonePosition: {x: -0.32010087, y: 0.91764486, z: -0.07434368}
+  torsoZonePosition: {x: -0.3037764, y: 0.7378208, z: -0.18962827}
+  rightArmZonePosition: {x: -0.523194, y: 0.93251413, z: -0.18595177}
+  rightHandZonePosition: {x: -0.5930888, y: 1.0805652, z: -0.20323968}
+  leftArmZonePosition: {x: -0.08985184, y: 0.90348786, z: -0.08134464}
+  leftHandZonePosition: {x: -0.011526755, y: 1.0478041, z: -0.09319559}
