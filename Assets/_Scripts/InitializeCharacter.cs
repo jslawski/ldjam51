@@ -7,12 +7,25 @@ public class InitializeCharacter : MonoBehaviour
     [SerializeField]
     private RagdollManipulator manipulator;
 
+    [SerializeField]
+    private Material bodyMaterial;
+
+    private Texture2D[] bodyTextures;
+
     public void Awake()
     {
         GameObject.Find("GoalZones").GetComponent<GoalZoneParent>().SetupGoalZoneParent(this.gameObject.transform.position);
         GameObject.Find("PuppetManipulator").GetComponent<RagdollManipulator>().SetupRagdollManipulator();
 
+        this.CustomizeCharacter();
+
         StartCoroutine(this.RandomlyApplyGravity());
+    }
+
+    private void CustomizeCharacter()
+    {
+        this.bodyTextures = Resources.LoadAll<Texture2D>("BodyTextures");
+        this.bodyMaterial.mainTexture = this.bodyTextures[Random.Range(0, this.bodyTextures.Length)];
     }
 
     private IEnumerator RandomlyApplyGravity()

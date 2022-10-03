@@ -2812,6 +2812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manipulator: {fileID: 8505434240165655474}
+  bodyMaterial: {fileID: 2100000, guid: 16575bbad4ebc67449dff2f40a511291, type: 2}
 --- !u!1001 &2248214800974750856
 PrefabInstance:
   m_ObjectHideFlags: 0
