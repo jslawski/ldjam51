@@ -214,7 +214,7 @@ public static class LiteralStrings
         quotes.Add("Can’t wait to get back on the water and catch me a delicious bass");
         quotes.Add("All Hail the Black Bass!");
         quotes.Add("Can you tell that I’ve had work done?");
-        quotes.Add("On a scale from 1-10, how do you rate them?a");
+        quotes.Add("On a scale from 1-10, how do you rate them?");
         quotes.Add("Get a cousin!");
         quotes.Add("The number 10 is the worst number");
         quotes.Add("Congratulations on a successful Jam!");
