@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     private GameObject currentCharacter;
 
     private int currentRound = 0;
-    private int numRounds = 3;
+    private int numRounds = 12;
 
     public string characterName;
     public string quote;
@@ -88,9 +88,8 @@ public class GameManager : MonoBehaviour
     private void StartGame()
     {
         if (debug == false)
-        {
-            this.PlayStartAnimation();
-            this.StartupGameSequence();
+        {            
+            StartCoroutine(this.StartupGameSequence());
         }
         else
         {
@@ -98,8 +97,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void StartupGameSequence()
-    {        
+    private IEnumerator StartupGameSequence()
+    {
+        yield return new WaitForSeconds(0.2f);
+        this.PlayStartAnimation();
+
         LoadNextLevel();
     }
 
