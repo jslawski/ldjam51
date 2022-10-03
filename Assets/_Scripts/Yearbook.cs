@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Yearbook : MonoBehaviour
 {
@@ -18,5 +19,20 @@ public class Yearbook : MonoBehaviour
         {
             this.yearbookEntries[i].SetupYearbookEntry(PhotoAlbum.photos[i]);
         }
+    }
+
+    public void OnPlayAgainClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().name);        
+    }
+
+    public void OnMainMenuClicked()
+    {
+        SceneLoader.instance.LoadScene("MainMenu");
+    }
+    public void OnExitClicked()
+    {
+        Application.Quit();
     }
 }
