@@ -67,8 +67,8 @@ public class PhotoTaker : MonoBehaviour
         RenderTexture.active = null;
 
         // save photoTexture to file
-        var bytes = savephotoTexture.EncodeToPNG();
-        System.IO.File.WriteAllBytes(Application.dataPath + "/Resources/Photos/photo" + this.photoId + ".png", bytes);
+        //var bytes = savephotoTexture.EncodeToPNG();
+        //System.IO.File.WriteAllBytes(Application.dataPath + "/Resources/Photos/photo" + this.photoId + ".png", bytes);
 
         this.photoId++;
 
