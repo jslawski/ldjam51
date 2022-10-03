@@ -17,6 +17,9 @@ public class PhotoTaker : MonoBehaviour
     [SerializeField]
     private Animator photoAnimator;
 
+    [SerializeField]
+    private ResultsCanvas resultsCanvas;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -76,12 +79,16 @@ public class PhotoTaker : MonoBehaviour
 
         this.photoAnimator.SetTrigger("ShowPhoto");
 
+        this.resultsCanvas.ShowResultsAnimation();
+
         if (GameManager.instance.tutorial == false)
         {
             PhotoData newPhotoData = new PhotoData(savephotoTexture);
             PhotoAlbum.AddPhoto(newPhotoData);
         }
     }
+
+    
 
     private void OnDestroy()
     {
