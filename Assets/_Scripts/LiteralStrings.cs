@@ -4,7 +4,8 @@ using UnityEngine;
 
 public static class LiteralStrings
 {
-    public static List<string> names;
+    public static List<string> firstNames;
+    public static List<string> lastNames;
     public static List<string> quotes;
 
     public static void SetupLists()
@@ -15,12 +16,15 @@ public static class LiteralStrings
 
     public static string GetRandomName()
     {
-        int chosenIndex = Random.Range(0, names.Count);
-        string chosenName = names[chosenIndex];
+        int chosenFirstIndex = Random.Range(0, firstNames.Count);
+        int chosenLastIndex = Random.Range(0, lastNames.Count);
+
+        string chosenName = firstNames[chosenFirstIndex] + " " + lastNames[chosenLastIndex];
 
         if (GameManager.instance.tutorial == false)
         {
-            names.RemoveAt(chosenIndex);
+            firstNames.RemoveAt(chosenFirstIndex);
+            lastNames.RemoveAt(chosenLastIndex);
         }
 
         return chosenName;
@@ -41,11 +45,26 @@ public static class LiteralStrings
 
     private static void SetupNames()
     {
-        names = new List<string>();
+        SetupFirstNames();
+        SetupLastNames();
+    }
 
-        names.Add("Stephen Rudd");
-        names.Add("Andrew Rudd");
-        names.Add("Jared Slawski");
+    private static void SetupFirstNames()
+    {
+        firstNames = new List<string>();
+
+        firstNames.Add("Stephen");
+        firstNames.Add("Andrew");
+        firstNames.Add("Jared");
+    }
+
+    private static void SetupLastNames()
+    {
+        lastNames = new List<string>();
+
+        lastNames.Add("Rogers");
+        lastNames.Add("Smith");
+        lastNames.Add("Astley");
     }
 
     private static void SetupQuotes()
