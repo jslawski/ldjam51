@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     private GameObject characterPrefab;
     private GameObject currentCharacter;
 
+    private int currentRound = 0;
+    private int numRounds = 12;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -46,7 +49,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void StartupGameSequence()
-    {
+    {        
         LoadNextLevel();
     }
 
@@ -80,8 +83,19 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        this.CloseAperture();
-        StartCoroutine(this.LoadCharacter());
+        if (this.currentRound < this.numRounds)
+        {
+
+            this.currentRound++;
+            this.CloseAperture();
+            StartCoroutine(this.LoadCharacter());
+        }
+
+        else
+        {
+            //End Game
+            Debug.LogError("GAME OVER");
+        }
     }
 
     private IEnumerator LoadCharacter()
