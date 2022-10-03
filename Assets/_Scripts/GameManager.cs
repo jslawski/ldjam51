@@ -66,6 +66,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject endAnimator;
 
+    [SerializeField]
+    private AudioSource transitionSound;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -125,11 +129,13 @@ public class GameManager : MonoBehaviour
     public void CloseAperture()
     {
         this.apertureAnimator.SetTrigger("CloseTrigger");
+        this.transitionSound.Play();
     }
 
     public void OpenAperture()
-    {
+    {        
         this.apertureAnimator.SetTrigger("OpenTrigger");
+        this.transitionSound.Play();
     }
 
     public void PlayStartAnimation()

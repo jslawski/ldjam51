@@ -20,6 +20,9 @@ public class PhotoTaker : MonoBehaviour
     [SerializeField]
     private ResultsCanvas resultsCanvas;
 
+    [SerializeField]
+    private AudioSource cameraSound;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -78,6 +81,8 @@ public class PhotoTaker : MonoBehaviour
         this.resultMaterial.mainTexture = savephotoTexture;
 
         this.photoAnimator.SetTrigger("ShowPhoto");
+
+        this.cameraSound.Play();
 
         this.resultsCanvas.ShowResultsAnimation();
 
