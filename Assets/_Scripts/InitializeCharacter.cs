@@ -17,6 +17,9 @@ public class InitializeCharacter : MonoBehaviour
     private MeshFilter eyesFilter;
 
     [SerializeField]
+    private MeshRenderer eyesRenderer;
+
+    [SerializeField]
     private MeshFilter noseFilter;
 
     public void Awake()
@@ -35,20 +38,27 @@ public class InitializeCharacter : MonoBehaviour
         Texture2D[] bodyTextures = Resources.LoadAll<Texture2D>("BodyTextures");
         this.bodyMaterial.mainTexture = bodyTextures[Random.Range(0, bodyTextures.Length)];
 
+        Texture2D[] eyesTextures = Resources.LoadAll<Texture2D>("CharTextures/eyes");
+        this.eyesRenderer.material.mainTexture = eyesTextures[Random.Range(0, eyesTextures.Length)];
+
         Mesh[] eyesMeshes = Resources.LoadAll<Mesh>("Meshes/Eyes");
         this.eyesFilter.mesh = eyesMeshes[Random.Range(0, eyesMeshes.Length)];
 
         Mesh[] noseMeshes = Resources.LoadAll<Mesh>("Meshes/Noses");
         this.noseFilter.mesh = noseMeshes[Random.Range(0, noseMeshes.Length)];
-
+        
         List<Transform> childHairs = new List<Transform>();
-
         for (int i = 0; i < this.headTop.transform.childCount; i++)
         {
             childHairs.Add(this.headTop.transform.GetChild(i));
         }
 
-        childHairs[UnityEngine.Random.Range(0, childHairs.Count)].gameObject.SetActive(true);
+        int randomIndex = Random.Range(0, childHairs.Count);
+        childHairs[randomIndex].gameObject.SetActive(true);
+
+        Texture2D[] allHairTextures = Resources.LoadAll<Texture2D>("CharTextures/" + childHairs[randomIndex].name);
+        childHairs[randomIndex].GetComponent<MeshRenderer>().material.mainTexture = 
+            allHairTextures[Random.Range(0, allHairTextures.Length)];
     }
 
     private IEnumerator RandomlyApplyGravity()
