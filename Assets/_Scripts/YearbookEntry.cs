@@ -26,7 +26,7 @@ public class YearbookEntry : MonoBehaviour
         {
             this.scoreImage.sprite = Resources.Load<Sprite>("UI/Yearbook/scorePin_Perfect");
         }
-        else if (yearbookPhoto.score >= GameManager.instance.perfectScore)
+        else if (yearbookPhoto.score >= GameManager.instance.goodScore)
         {
             this.scoreImage.sprite = Resources.Load<Sprite>("UI/Yearbook/scorePin_Gooder");
         }

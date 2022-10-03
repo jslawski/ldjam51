@@ -53,7 +53,18 @@ public class GameManager : MonoBehaviour
     private bool tutorialSuccessTriggered = false;
 
     public int perfectScore = 6;
-    public int goodScore = 4;    
+    public int goodScore = 4;
+
+    [SerializeField]
+    private AudioSource gameAudio;
+
+    [SerializeField]
+    private AudioSource yearbookAudio;
+
+    [SerializeField]
+    private GameObject startAnimator;
+    [SerializeField]
+    private GameObject endAnimator;
 
     // Start is called before the first frame update
     void Awake()
@@ -74,6 +85,7 @@ public class GameManager : MonoBehaviour
     {
         if (debug == false)
         {
+            this.PlayStartAnimation();
             this.StartupGameSequence();
         }
         else
@@ -120,6 +132,34 @@ public class GameManager : MonoBehaviour
         this.apertureAnimator.SetTrigger("OpenTrigger");
     }
 
+    public void PlayStartAnimation()
+    {
+        StartCoroutine(this.PlayStart());
+    }
+
+    public void PlayEndAnimation()
+    {
+        StartCoroutine(this.PlayEnd());
+    }
+
+    private IEnumerator PlayStart()
+    {
+        this.startAnimator.SetActive(true);
+
+        yield return new WaitForSeconds(3.0f);
+
+        this.startAnimator.SetActive(false);
+    }
+
+    private IEnumerator PlayEnd()
+    {
+        this.endAnimator.SetActive(true);
+
+        yield return new WaitForSeconds(3.0f);
+
+        this.endAnimator.SetActive(false);
+    }
+
     public void LoadNextLevel()
     {
         if (this.currentRound < this.numRounds)
@@ -136,12 +176,20 @@ public class GameManager : MonoBehaviour
         {
             //End Game
             this.CloseAperture();
-            this.DisplayYearbook();
+            StartCoroutine(this.DisplayYearbook());
         }
     }
 
-    private void DisplayYearbook()
+    private IEnumerator DisplayYearbook()
     {
+        this.gameAudio.Stop();
+
+        this.PlayEndAnimation();
+
+        yield return new WaitForSeconds(3.0f);
+
+        this.yearbookAudio.Play();
+
         this.yearbook.SetActive(true);
     }
 
