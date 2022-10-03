@@ -12,7 +12,7 @@ public class PhotoTaker : MonoBehaviour
 
     private Material resultMaterial;
 
-    private int photoId = 0;
+    //private int photoId = 0;
 
     [SerializeField]
     private Animator photoAnimator;
@@ -70,19 +70,15 @@ public class PhotoTaker : MonoBehaviour
         //var bytes = savephotoTexture.EncodeToPNG();
         //System.IO.File.WriteAllBytes(Application.dataPath + "/Resources/Photos/photo" + this.photoId + ".png", bytes);
 
-        this.photoId++;
+        //this.photoId++;
 
         this.resultMaterial.mainTexture = savephotoTexture;
 
         this.photoAnimator.SetTrigger("ShowPhoto");
-    }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.P))
-        {
-            this.TakePhoto();
-        }
+        PhotoData newPhotoData = new PhotoData(savephotoTexture);
+
+        PhotoAlbum.AddPhoto(newPhotoData);
     }
 
     private void OnDestroy()

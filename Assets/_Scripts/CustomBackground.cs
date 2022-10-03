@@ -13,8 +13,6 @@ public class CustomBackground : MonoBehaviour
     {
         this.allTextures = Resources.LoadAll<Texture2D>("BGTextures");
 
-        Debug.LogError("Count: " + this.allTextures.Length);
-
         this.bgMaterial.mainTexture = this.allTextures[Random.Range(0, this.allTextures.Length)];
     }
 }

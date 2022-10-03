@@ -27,7 +27,10 @@ public class GameManager : MonoBehaviour
     private GameObject currentCharacter;
 
     private int currentRound = 0;
-    private int numRounds = 12;
+    private int numRounds = 3;
+
+    public string characterName;
+    public string quote;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
 
         this.allPoses = Resources.LoadAll<PoseData>("Poses");
+        LiteralStrings.SetupLists();
     }
 
     private void StartGame()
@@ -90,7 +94,6 @@ public class GameManager : MonoBehaviour
             this.CloseAperture();
             StartCoroutine(this.LoadCharacter());
         }
-
         else
         {
             //End Game
@@ -101,6 +104,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator LoadCharacter()
     {
         yield return new WaitForSeconds(0.5f);
+
+        this.characterName = LiteralStrings.GetRandomName();
+        this.quote = LiteralStrings.GetRandomQuote();
 
         Destroy(this.currentCharacter);
 
