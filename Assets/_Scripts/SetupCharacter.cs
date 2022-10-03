@@ -30,11 +30,12 @@ public class SetupCharacter : MonoBehaviour
 
         for (int i = 0; i < this.ragdollManipulator.allInteractableColliders.Length; i++)
         {
+            
             //this.ragdollManipulator.allInteractableColliders[i].joint.connectedBody.isKinematic = false;
             //this.jointPresets[i].ApplyTo(this.ragdollManipulator.allInteractableColliders[i].joint);
             //this.ragdollManipulator.allInteractableColliders[i].joint.autoConfigureConnectedAnchor = false;
             //this.ragdollManipulator.allInteractableColliders[i].joint.connectedAnchor = Vector3.zero;
-
+            
             this.jointRbs.Add(this.ragdollManipulator.allInteractableColliders[i].joint.connectedBody);
             Destroy(this.ragdollManipulator.allInteractableColliders[i].joint);
         }
@@ -44,7 +45,7 @@ public class SetupCharacter : MonoBehaviour
 
     private IEnumerator ApplyGravity()
     {
-        float randomDuration = UnityEngine.Random.Range(0.5f, 1.5f);
+        float randomDuration = UnityEngine.Random.Range(0.5f, 1.0f);
 
         for (int i = 0; i < this.jointRbs.Count; i++)
         {
@@ -71,6 +72,9 @@ public class SetupCharacter : MonoBehaviour
     {
         for (int i = 0; i < this.jointRbs.Count; i++)
         {
+            this.ragdollManipulator.allInteractableColliders[i].colliderRb.position = this.jointRbs[i].position;
+            //this.ragdollManipulator.allInteractableColliders[i].colliderRb.rotation = this.jointRbs[i].rotation;
+
             this.ragdollManipulator.allInteractableColliders[i].joint =
                     this.ragdollManipulator.allInteractableColliders[i].gameObject.AddComponent<ConfigurableJoint>();
             if (this.jointPresets[i].CanBeAppliedTo(this.ragdollManipulator.allInteractableColliders[i].joint))
@@ -79,7 +83,7 @@ public class SetupCharacter : MonoBehaviour
                 this.jointPresets[i].ApplyTo(this.ragdollManipulator.allInteractableColliders[i].joint);
 
                 this.ragdollManipulator.allInteractableColliders[i].joint.connectedBody = this.jointRbs[i];
-                this.ragdollManipulator.allInteractableColliders[i].colliderRb.position = this.jointRbs[i].position;
+                //this.ragdollManipulator.allInteractableColliders[i].colliderRb.position = this.jointRbs[i].position;
             }            
         }
 
@@ -96,6 +100,16 @@ public class SetupCharacter : MonoBehaviour
         for (int i = 0; i < this.jointRbs.Count; i++)
         {
             this.jointRbs[i].isKinematic = false;
+        }
+
+        for (int i = 0; i < this.jointRbs.Count; i++)
+        {
+            this.ragdollManipulator.allInteractableColliders[i].joint.autoConfigureConnectedAnchor = true;
+        }
+        yield return null;
+        for (int i = 0; i < this.jointRbs.Count; i++)
+        {
+            this.ragdollManipulator.allInteractableColliders[i].joint.autoConfigureConnectedAnchor = false;
         }
     }
 }
