@@ -92,7 +92,9 @@ public class GameManager : MonoBehaviour
 
         yield return null;
 
-        this.currentCharacter = Instantiate(this.characterPrefab, Vector3.zero, Quaternion.Euler(0.0f, 180.0f, 0.0f));
+        Vector3 spawnPosition = new Vector3(-0.3f, 0.1f, -0.2f);
+            
+        this.currentCharacter = Instantiate(this.characterPrefab, spawnPosition, Quaternion.Euler(0.0f, 160.0f, 0.0f));
         this.SetupNextPose();
     }
 

@@ -49,8 +49,6 @@ public class InitializeCharacter : MonoBehaviour
         }
 
         childHairs[UnityEngine.Random.Range(0, childHairs.Count)].gameObject.SetActive(true);
-
-
     }
 
     private IEnumerator RandomlyApplyGravity()
