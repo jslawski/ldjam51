@@ -10,7 +10,14 @@ public class InitializeCharacter : MonoBehaviour
     [SerializeField]
     private Material bodyMaterial;
 
-    private Texture2D[] bodyTextures;
+    [SerializeField]
+    private GameObject headTop;
+
+    [SerializeField]
+    private MeshFilter eyesFilter;
+
+    [SerializeField]
+    private MeshFilter noseFilter;
 
     public void Awake()
     {
@@ -24,8 +31,25 @@ public class InitializeCharacter : MonoBehaviour
 
     private void CustomizeCharacter()
     {
-        this.bodyTextures = Resources.LoadAll<Texture2D>("BodyTextures");
-        this.bodyMaterial.mainTexture = this.bodyTextures[Random.Range(0, this.bodyTextures.Length)];
+        Texture2D[] bodyTextures = Resources.LoadAll<Texture2D>("BodyTextures");
+        this.bodyMaterial.mainTexture = bodyTextures[Random.Range(0, bodyTextures.Length)];
+
+        Mesh[] eyesMeshes = Resources.LoadAll<Mesh>("Meshes/Eyes");
+        this.eyesFilter.mesh = eyesMeshes[Random.Range(0, eyesMeshes.Length)];
+
+        Mesh[] noseMeshes = Resources.LoadAll<Mesh>("Meshes/Noses");
+        this.noseFilter.mesh = noseMeshes[Random.Range(0, noseMeshes.Length)];
+
+        List<Transform> childHairs = new List<Transform>();
+
+        for (int i = 0; i < this.headTop.transform.childCount; i++)
+        {
+            childHairs.Add(this.headTop.transform.GetChild(i));
+        }
+
+        childHairs[UnityEngine.Random.Range(0, childHairs.Count)].gameObject.SetActive(true);
+
+
     }
 
     private IEnumerator RandomlyApplyGravity()
