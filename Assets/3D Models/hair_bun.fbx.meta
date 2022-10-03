@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: f11c2571c9767af4aa3614a69e26376f
+guid: 8e9e4dcafab025d4994cd006008df3e1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hairMaterial_Bun
+    second: {fileID: 2100000, guid: 2f483bac560899144aaaf88ad57ab987, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
