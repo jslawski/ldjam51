@@ -2753,7 +2753,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8501990281898775676}
   - component: {fileID: 2530195922304601606}
-  - component: {fileID: 1437463318}
   - component: {fileID: 1437463321}
   m_Layer: 0
   m_Name: PuppetRagdoll
@@ -2800,30 +2799,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1437463318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9130753236995018438}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3cd5179e662f6741b47d28e3e81fdf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ragdollManipulator: {fileID: 8505434240165655474}
-  jointRbs: []
-  jointPresets:
-  - {fileID: 2655988077585873504, guid: b42384898122c554aa6fc66ea50e6e29, type: 2}
-  - {fileID: 2655988077585873504, guid: ad8f4dd38ecde5a40a07707e4054b6f4, type: 2}
-  - {fileID: 2655988077585873504, guid: 8d01f84b9d463754180625868ddea9f5, type: 2}
-  - {fileID: 2655988077585873504, guid: 6141df1fe62c4e041877555174afc0cc, type: 2}
-  - {fileID: 2655988077585873504, guid: faecf0214e824504e9edbae867b7d640, type: 2}
-  - {fileID: 2655988077585873504, guid: 678875bdf089ad7458ce1abb2378b0a0, type: 2}
-  allRbs: []
-  rightArmRb: {fileID: 3441295657364204868}
-  leftArmRb: {fileID: 249107634046367302}
 --- !u!114 &1437463321
 MonoBehaviour:
   m_ObjectHideFlags: 0

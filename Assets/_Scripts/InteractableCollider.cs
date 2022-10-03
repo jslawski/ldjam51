@@ -14,7 +14,7 @@ public class InteractableCollider : MonoBehaviour
     protected Vector3 targetPosition;
 
     // Start is called before the first frame update
-    protected virtual void Awake()
+    public virtual void SetupInteractableCollider()
     {
         this.colliderRb = GetComponent<Rigidbody>();
         this.joint = GetComponent<ConfigurableJoint>();

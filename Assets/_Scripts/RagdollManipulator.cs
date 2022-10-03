@@ -13,18 +13,13 @@ public class RagdollManipulator : MonoBehaviour
 
     private float rayDistance = 0.0f;
 
-    /*
-    private void Start()
+    public void SetupRagdollManipulator()
     {
         for (int i = 0; i < this.allInteractableColliders.Length; i++)
         {
-            this.allInteractableColliders[i].colliderRb.gameObject.transform.position = this.allInteractableColliders[i].joint.connectedBody.position;
-            this.allInteractableColliders[i].colliderRb.gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
-            this.allInteractableColliders[i].colliderRb.gameObject.SetActive(true);
-            this.allInteractableColliders[i].joint.connectedBody.isKinematic = false;
+            this.allInteractableColliders[i].SetupInteractableCollider();
         }
     }
-    */
 
     private void Update()
     {
@@ -79,17 +74,4 @@ public class RagdollManipulator : MonoBehaviour
                 this.allInteractableColliders[i].joint.connectedBody.position;
         }
     }
-
-    /*
-    private void FixedUpdate()
-    {
-        
-        if (this.grabbedCollider != null)
-        {            
-            this.grabbedCollider.colliderRb.MovePosition(new Vector3(this.targetDestination.x, 
-                                                this.targetDestination.y, 
-                                                this.grabbedCollider.colliderRb.position.z));                                                
-        }        
-    } 
-    */
 }

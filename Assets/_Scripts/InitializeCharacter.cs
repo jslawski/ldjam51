@@ -7,9 +7,11 @@ public class InitializeCharacter : MonoBehaviour
     [SerializeField]
     private RagdollManipulator manipulator;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
+        GameObject.Find("GoalZones").GetComponent<GoalZoneParent>().SetupGoalZoneParent(this.gameObject.transform.position);
+        GameObject.Find("PuppetManipulator").GetComponent<RagdollManipulator>().SetupRagdollManipulator();
+
         StartCoroutine(this.RandomlyApplyGravity());
     }
 
@@ -34,6 +36,10 @@ public class InitializeCharacter : MonoBehaviour
         {
             this.manipulator.allInteractableColliders[i].colliderRb.isKinematic = true;
             this.manipulator.allInteractableColliders[i].colliderRb.useGravity = false;
-        }        
+        }
+
+
+        GameManager.instance.OpenAperture();
+        GameManager.instance.StartLevelTimer();
     }
 }
