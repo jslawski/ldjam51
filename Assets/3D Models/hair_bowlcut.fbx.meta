@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: f23b1edf5a4e2cd45adcc3ee75e9e75a
+guid: 1ea94a44ad2d6bb4487eab336bbb91ca
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hairMaterial_Bowlcut
+    second: {fileID: 2100000, guid: b6c97bfa7ff7a1c42862316eb867b767, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
