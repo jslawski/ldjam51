@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     public string characterName;
     public string quote;
 
+    [SerializeField]
+    private GameObject yearbook;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -49,6 +52,10 @@ public class GameManager : MonoBehaviour
         if (debug == false)
         {
             this.StartupGameSequence();
+        }
+        else
+        {
+            StartCoroutine(this.LoadCharacter());
         }
     }
 
@@ -97,8 +104,15 @@ public class GameManager : MonoBehaviour
         else
         {
             //End Game
+            this.CloseAperture();
+            this.DisplayYearbook();
             Debug.LogError("GAME OVER");
         }
+    }
+
+    private void DisplayYearbook()
+    {
+        this.yearbook.SetActive(true);
     }
 
     private IEnumerator LoadCharacter()

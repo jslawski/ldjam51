@@ -74,8 +74,10 @@ public class InitializeCharacter : MonoBehaviour
             this.manipulator.allInteractableColliders[i].colliderRb.useGravity = false;
         }
 
-
-        GameManager.instance.OpenAperture();
-        GameManager.instance.StartLevelTimer();
+        if (GameManager.instance.debug == false)
+        {
+            GameManager.instance.OpenAperture();
+            GameManager.instance.StartLevelTimer();
+        }
     }
 }

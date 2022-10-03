@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableHandArm : InteractableCollider
 {
-    private float moveSpeed = 3f;
+    private float moveSpeed = 5f;
 
     protected override void UpdateJoint()
     {
