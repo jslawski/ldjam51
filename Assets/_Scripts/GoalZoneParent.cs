@@ -9,7 +9,7 @@ public class GoalZoneParent : MonoBehaviour
 
     public void SetupGoalZoneParent(Vector3 playerPosition)
     {
-        this.gameObject.transform.position = playerPosition;
+        //this.gameObject.transform.position = playerPosition;
 
         for (int i = 0; i < this.transform.childCount; i++)
         {

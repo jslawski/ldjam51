@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +36,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject yearbook;
+
+    [SerializeField]
+    private Image poseImage;
+
+    [SerializeField]
+    private TextMeshProUGUI studentCounter;
+    [SerializeField]
+    private TextMeshProUGUI nameLabel;
+    [SerializeField]
+    private TextMeshProUGUI poseLabel;
 
     // Start is called before the first frame update
     void Awake()
@@ -72,8 +84,7 @@ public class GameManager : MonoBehaviour
         levelScore = 0;
 
         PoseData currentPose = this.allPoses[UnityEngine.Random.Range(0, this.allPoses.Length)];
-
-        Debug.LogError("Current Pose: " + currentPose.name);
+        this.poseImage.sprite = Resources.Load<Sprite>("PoseSprites/" + currentPose.name);
         
         this.goalZoneParent.allGoalZonesTransforms[0].position += currentPose.headZonePosition;
         this.goalZoneParent.allGoalZonesTransforms[1].position += currentPose.torsoZonePosition;
@@ -116,13 +127,33 @@ public class GameManager : MonoBehaviour
         this.yearbook.SetActive(true);
     }
 
+    private void UpdateLabels()
+    {
+        if (this.poseImage.sprite.name.Contains("Dab"))
+        {
+            this.poseLabel.text = "Dab";    
+        }
+        else if (this.poseImage.sprite.name.Contains("Sassy"))
+        {
+            this.poseLabel.text = "Sassy";
+        }
+        else if (this.poseImage.sprite.name.Contains("VPose"))
+        {
+            this.poseLabel.text = "V-Pose";
+        }
+
+        this.studentCounter.text = this.currentRound.ToString() + "/" + this.numRounds.ToString() + " Students";
+
+        this.nameLabel.text = this.characterName;
+    }
+
     private IEnumerator LoadCharacter()
     {
         yield return new WaitForSeconds(0.5f);
-
+        
         this.characterName = LiteralStrings.GetRandomName();
         this.quote = LiteralStrings.GetRandomQuote();
-
+        
         Destroy(this.currentCharacter);
 
         yield return null;
@@ -131,6 +162,8 @@ public class GameManager : MonoBehaviour
             
         this.currentCharacter = Instantiate(this.characterPrefab, spawnPosition, Quaternion.Euler(0.0f, 160.0f, 0.0f));
         this.SetupNextPose();
+
+        this.UpdateLabels();
     }
 
     public void StartLevelTimer()

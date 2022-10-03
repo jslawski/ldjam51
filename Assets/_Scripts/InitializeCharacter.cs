@@ -28,6 +28,11 @@ public class InitializeCharacter : MonoBehaviour
         GameObject.Find("PuppetManipulator").GetComponent<RagdollManipulator>().SetupRagdollManipulator();
         GameObject.Find("Background").GetComponent<CustomBackground>().SetRandomBackground();
 
+        if (GameManager.instance.debug == true)
+        {
+            GameObject.Find("GoalZones").GetComponent<GoalPoseMaker>().SetupRagdollRbs(this.manipulator);
+        }
+
         this.CustomizeCharacter();
 
         StartCoroutine(this.RandomlyApplyGravity());
