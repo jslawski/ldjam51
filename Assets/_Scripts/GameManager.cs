@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 
         this.allPoses = Resources.LoadAll<PoseData>("Poses");
         LiteralStrings.SetupLists();
+        PhotoAlbum.SetupPhotoAlbum();
     }
 
     private void StartGame()

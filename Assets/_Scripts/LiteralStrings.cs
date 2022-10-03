@@ -7,9 +7,6 @@ public static class LiteralStrings
     public static List<string> names;
     public static List<string> quotes;
 
-    //private static List<string> chosenNames;
-    //private static List<string> chosenQuotes;
-
     public static void SetupLists()
     {
         SetupNames();
@@ -37,7 +34,6 @@ public static class LiteralStrings
     private static void SetupNames()
     {
         names = new List<string>();
-        //chosenNames = new List<string>();
 
         names.Add("Stephen Rudd");
         names.Add("Andrew Rudd");
@@ -47,7 +43,6 @@ public static class LiteralStrings
     private static void SetupQuotes()
     {
         quotes = new List<string>();
-        //chosenQuotes = new List<string>();
 
         quotes.Add("I'm stackin' paper like Jenga!");
         quotes.Add("Obviously that's the right option...");
