@@ -92,7 +92,11 @@ public class InitializeCharacter : MonoBehaviour
         if (GameManager.instance.debug == false)
         {
             GameManager.instance.OpenAperture();
-            GameManager.instance.StartLevelTimer();
+
+            if (GameManager.instance.tutorial == false)
+            {
+                GameManager.instance.StartLevelTimer();
+            }
         }
     }
 }

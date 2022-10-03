@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI nameLabel;
     [SerializeField]
     private TextMeshProUGUI poseLabel;
+    
+    public bool tutorial = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour
         this.allPoses = Resources.LoadAll<PoseData>("Poses");
         LiteralStrings.SetupLists();
         PhotoAlbum.SetupPhotoAlbum();
+
+        this.StartGame();
     }
 
     private void StartGame()
@@ -82,10 +86,16 @@ public class GameManager : MonoBehaviour
     private void SetupNextPose()
     {
         levelScore = 0;
-
-        PoseData currentPose = this.allPoses[UnityEngine.Random.Range(0, this.allPoses.Length)];
-        this.poseImage.sprite = Resources.Load<Sprite>("PoseSprites/" + currentPose.name);
         
+        PoseData currentPose = this.allPoses[UnityEngine.Random.Range(0, this.allPoses.Length)];
+        
+        if (this.tutorial == true)
+        {
+            currentPose = this.allPoses[this.allPoses.Length - 1];            
+        }
+
+        this.poseImage.sprite = Resources.Load<Sprite>("PoseSprites/" + currentPose.name);
+
         this.goalZoneParent.allGoalZonesTransforms[0].position += currentPose.headZonePosition;
         this.goalZoneParent.allGoalZonesTransforms[1].position += currentPose.torsoZonePosition;
         this.goalZoneParent.allGoalZonesTransforms[2].position += currentPose.rightArmZonePosition;
@@ -108,9 +118,12 @@ public class GameManager : MonoBehaviour
     {
         if (this.currentRound < this.numRounds)
         {
-
-            this.currentRound++;
-            this.CloseAperture();
+            if (this.tutorial == false)
+            {
+                this.currentRound++;
+                this.CloseAperture();
+            }
+            
             StartCoroutine(this.LoadCharacter());
         }
         else
@@ -118,7 +131,6 @@ public class GameManager : MonoBehaviour
             //End Game
             this.CloseAperture();
             this.DisplayYearbook();
-            Debug.LogError("GAME OVER");
         }
     }
 
@@ -174,14 +186,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.R))
+        if (this.tutorial == true && this.levelScore >= 5)
         {
-            SceneManager.LoadScene(0);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            this.StartGame();
+            this.tutorial = false;
+            this.LoadNextLevel();
         }
     }
 }
