@@ -99,7 +99,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 15
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -1594,7 +1594,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 15
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -2990,6 +2990,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3793379605213794877, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
+      propertyPath: m_SecondaryAxis.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793379605213794877, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.052825343
       objectReference: {fileID: 0}
@@ -3000,6 +3004,10 @@ PrefabInstance:
     - target: {fileID: 3793379605213794877, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 0.9199503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793379605213794877, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3793379605213794877, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_LinearLimitSpring.spring
@@ -3039,11 +3047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4276225892177563258, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_Constraints
-      value: 120
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4535300518695275053, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_Constraints
-      value: 120
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5634869592487116714, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3167,7 +3175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8431860816616191405, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_Constraints
-      value: 120
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8431860816616191407, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3207,7 +3215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8431860817806900124, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_Constraints
-      value: 120
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8431860817806900126, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3310,6 +3318,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8431860818033303933, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
+      propertyPath: m_SecondaryAxis.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431860818033303933, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.21663027
       objectReference: {fileID: 0}
@@ -3331,7 +3343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8431860818033303935, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_Constraints
-      value: 120
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8431860818086782448, guid: 3c22c74af45599249bc18f61f5996a04, type: 3}
       propertyPath: m_LocalPosition.x
