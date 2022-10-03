@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class RagdollManipulator : MonoBehaviour
 {
-    [SerializeField]
-    private InteractableCollider[] allInteractableColliders;
+    public InteractableCollider[] allInteractableColliders;
 
     private InteractableCollider grabbedCollider;
 

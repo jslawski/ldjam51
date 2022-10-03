@@ -11,7 +11,6 @@ public class GoalZone : MonoBehaviour
     {
         if (other.gameObject.name == this.linkedObjectName)
         {
-            Debug.LogError(this.linkedObjectName + " Entered!");
             GameManager.instance.levelScore++;
         }
     }
@@ -20,7 +19,6 @@ public class GoalZone : MonoBehaviour
     {
         if (other.gameObject.name == this.linkedObjectName)
         {
-            Debug.LogError(this.linkedObjectName + " Exited!");
             GameManager.instance.levelScore--;
         }
     }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PhotoTaker : MonoBehaviour
@@ -32,6 +33,17 @@ public class PhotoTaker : MonoBehaviour
         savephotoTexture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGBA32, false, false);
 
         this.resultMaterial = Resources.Load<Material>("Materials/ResultMaterial");
+    }
+
+    public void StartTimer()
+    {
+        StartCoroutine(this.TimerCoroutine());
+    }
+
+    private IEnumerator TimerCoroutine()
+    {
+        yield return new WaitForSeconds(10.0f);
+        this.TakePhoto();
     }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
