@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     public bool tutorial = false;
     private bool tutorialSuccessTriggered = false;
 
+    public int perfectScore = 6;
+    public int goodScore = 4;    
+
     // Start is called before the first frame update
     void Awake()
     {

@@ -16,11 +16,11 @@ public class ResultsCanvas : MonoBehaviour
     {
         int resultIndex = 0;
 
-        if (GameManager.instance.levelScore >= 5)
+        if (GameManager.instance.levelScore >= GameManager.instance.perfectScore)
         {
             resultIndex = 0;
         }
-        else if (GameManager.instance.levelScore >= 2)
+        else if (GameManager.instance.levelScore >= GameManager.instance.goodScore)
         {
             resultIndex = 1;
         }
