@@ -23,6 +23,7 @@ public class InitializeCharacter : MonoBehaviour
     {
         GameObject.Find("GoalZones").GetComponent<GoalZoneParent>().SetupGoalZoneParent(this.gameObject.transform.position);
         GameObject.Find("PuppetManipulator").GetComponent<RagdollManipulator>().SetupRagdollManipulator();
+        GameObject.Find("Background").GetComponent<CustomBackground>().SetRandomBackground();
 
         this.CustomizeCharacter();
 

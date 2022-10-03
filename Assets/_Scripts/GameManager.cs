@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject characterPrefab;
-
     private GameObject currentCharacter;
 
     // Start is called before the first frame update
