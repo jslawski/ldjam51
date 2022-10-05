@@ -27,18 +27,14 @@ public class RagdollManipulator : MonoBehaviour
         {
             RaycastHit hit;
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);            
-            if (Physics.Raycast(mouseRay, out hit, Mathf.Infinity, detectableLayer))
+            if (Physics.Raycast(mouseRay, out hit, 10.0f, detectableLayer))
             {
                 this.grabbedCollider = hit.collider.gameObject.GetComponent<InteractableCollider>();
 
                 this.rayDistance = hit.distance;
 
-                Vector3 adjustedMosPos =
-                Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, this.rayDistance));
-                adjustedMosPos = new Vector3(adjustedMosPos.x, adjustedMosPos.y, this.grabbedCollider.colliderRb.position.z);
-
                 this.grabbedCollider.isGrabbed = true;
-                this.grabbedCollider.SetInitialClickPosition(adjustedMosPos);                                
+                this.grabbedCollider.SetInitialClickPosition(hit.point);                                
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -56,7 +52,7 @@ public class RagdollManipulator : MonoBehaviour
         if (this.rayDistance > 0.0f)
         {
             Vector3 adjustedMosPos =
-                Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, this.rayDistance));
+                Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1.16f));
             adjustedMosPos = new Vector3(adjustedMosPos.x, adjustedMosPos.y, this.grabbedCollider.colliderRb.position.z);
 
             if (this.grabbedCollider != null)
