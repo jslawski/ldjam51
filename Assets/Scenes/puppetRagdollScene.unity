@@ -278,7 +278,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   dragCheckDelayInSeconds: 0.2
-  maxTorqueForce: 5000
+  maxTorqueForce: 500
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 249107634046367302, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 249107634046367302, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
@@ -1114,23 +1114,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373759094051833291, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3373759094051833291, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3441295657364204868, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3441295657364204868, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
@@ -1170,11 +1170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109079779860638153, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4109079779860638153, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4125898817864250749, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
@@ -1186,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4950461468845541829, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4950461468845541829, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_AngularDrag
@@ -1198,11 +1198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5151973517119531417, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5151973517119531417, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5165331044910197203, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
@@ -1246,11 +1246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7695058712130136585, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7695058712130136585, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8384147550990819010, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer

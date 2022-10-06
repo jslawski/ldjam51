@@ -84,5 +84,8 @@ public class HandArmManipulator : MonoBehaviour
 
             lastPosition = currentPosition;
         }
+
+        this.objectRb.velocity = Vector3.zero;
+        this.objectRb.angularVelocity = Vector3.zero;
     }
 }
