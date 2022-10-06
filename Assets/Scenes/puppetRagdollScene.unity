@@ -994,11 +994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 249107634046367302, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 249107634046367302, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 506044683482758205, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Axis.x
@@ -1062,15 +1062,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Swing2Limit.limit
-      value: 60
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_LowTwistLimit.limit
-      value: -30
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_HighTwistLimit.limit
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 627931182259162239, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Swing1Limit.limit
@@ -1122,19 +1122,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3441295657364204868, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3441295657364204868, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
-      propertyPath: m_IsKinematic
+      propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Axis.x
@@ -1170,11 +1170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109079779860638153, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4109079779860638153, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4125898817864250749, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
@@ -1186,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4950461468845541829, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4950461468845541829, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_AngularDrag
@@ -1194,15 +1194,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4950461468845541829, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5151973517119531417, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5151973517119531417, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
-      propertyPath: m_IsKinematic
+      propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151973517119531417, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5165331044910197203, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
@@ -1246,11 +1246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7695058712130136585, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7695058712130136585, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8384147550990819010, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
