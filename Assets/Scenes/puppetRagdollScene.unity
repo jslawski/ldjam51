@@ -1032,6 +1032,46 @@ PrefabInstance:
       propertyPath: m_HighTwistLimit.limit
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Axis.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Axis.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Axis.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_SwingAxis.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_SwingAxis.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_SwingAxis.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Swing1Limit.limit
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Swing2Limit.limit
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_LowTwistLimit.limit
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 574709133302159301, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_HighTwistLimit.limit
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 627931182259162239, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Swing1Limit.limit
       value: 3
@@ -1074,19 +1114,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373759094051833291, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3373759094051833291, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3441295657364204868, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3441295657364204868, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
@@ -1095,6 +1135,34 @@ PrefabInstance:
     - target: {fileID: 3688434482062740299, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Axis.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_SwingAxis.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Swing1Limit.limit
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_Swing2Limit.limit
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_LowTwistLimit.limit
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_HighTwistLimit.limit
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861761528738029441, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
+      propertyPath: m_LowTwistLimit.bounciness
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4058472340469622799, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsActive
@@ -1102,11 +1170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109079779860638153, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4109079779860638153, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4125898817864250749, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
@@ -1178,11 +1246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7695058712130136585, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7695058712130136585, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8384147550990819010, guid: 7eb2d0f3947318949bff37707d1a814d, type: 3}
       propertyPath: m_Layer
