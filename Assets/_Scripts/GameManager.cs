@@ -69,7 +69,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private AudioSource transitionSound;
 
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -257,6 +256,6 @@ public class GameManager : MonoBehaviour
         {
             this.tutorialSuccessTriggered = true;
             this.photoTaker.TakePhoto();
-        }
+        }        
     }
 }
